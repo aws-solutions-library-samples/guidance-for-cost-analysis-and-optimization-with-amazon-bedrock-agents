@@ -274,6 +274,7 @@ Additional Considerations
 ## Notices
 
 Customers are responsible for making their own independent assessment of the information in this Guidance.  
+
 This Guidance:  
 (a) is for informational purposes only,  
 (b) represents AWS current product offerings and practices, which are subject to change without notice, and  
