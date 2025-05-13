@@ -240,6 +240,18 @@ To learn more about Amazon Bedrock, refer to the following resources:
 
 ## Cost
 
+| AWS Service | Usage Estimate | Monthly Cost (USD) |
+|-------------|----------------|---------------------|
+| Amazon Bedrock (Nova) | 3,000 requests * 1,000 tokens/request | $30.00 |
+| Amazon Cognito | 100 MAU | $0.00 (within free tier) |
+| AWS Lambda | 3,000 invocations * 5 functions * 1s avg. duration | $0.00 (within free tier) |
+| AWS Amplify | 1 GB storage, 5 GB data transfer | $0.23 |
+| Amazon CloudWatch | Basic monitoring + 1 GB logs | $0.50 |
+| AWS IAM | N/A | $0.00 |
+| AWS Cost Explorer | 3,000 API requests | $0.00 (within free tier) |
+| AWS Trusted Advisor | Basic checks | $0.00 |
+| **Total Estimated Monthly Cost** | | **$30.73** |
+
 ## Next Steps
 
 ## FAQ, Known Issues, Additional Considerations, and Limitations
