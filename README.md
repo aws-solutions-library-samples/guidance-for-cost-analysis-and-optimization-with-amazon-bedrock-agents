@@ -3,6 +3,32 @@
 
 # Build a FinOps agent using Amazon Bedrock with multi-agent capability and Amazon Nova as the foundation model
 
+## Table of Contents
+- 📋 [Overview](#overview)
+- 🏗️ [Solution overview](#solution-overview)
+- ✅ [Prerequisites](#prerequisites)
+- 🚀 [Deploy solution resources using AWS CloudFormation](#deploy-solution-resources-using-aws-cloudformation)
+- 💻 [Deploy the Amplify application](#deploy-the-amplify-application)
+- 🔐 [Amazon Cognito for user authentication](#amazon-cognito-for-user-authentication)
+- 🤖 [Amazon Bedrock Agents with multi-agent capability](#amazon-bedrock-agents-with-multi-agent-capability)
+- ⚡ [Lambda functions for Amazon Bedrock action groups](#lambda-functions-for-amazon-bedrock-action-groups)
+- 🌐 [Amplify for frontend](#amplify-for-frontend)
+- 🔄 [Multi-agent and application walkthrough](#multi-agent-and-application-walkthrough)
+- 🧹 [Clean up](#clean-up)
+- 💡 [Considerations](#considerations)
+- 📝 [Conclusion](#conclusion)
+- 📚 [Additional resources](#additional-resources)
+- 💰 [Cost](#cost)
+- ➡️ [Next Steps](#next-steps)
+- ❓ [FAQ, Known Issues, Additional Considerations, and Limitations](#faq-known-issues-additional-considerations-and-limitations)
+- 📋 [Revisions](#revisions)
+- ⚠️ [Notices](#notices)
+- 👥 [Authors](#authors)
+- 🔒 [Security](#security)
+- 📜 [License](#license)
+
+## Overview
+
 AI agents are revolutionizing how businesses enhance their operational capabilities and enterprise applications. By enabling natural language interactions, these agents provide customers with a streamlined, personalized experience. [Amazon Bedrock Agents](https://aws.amazon.com/bedrock/agents/) uses the capabilities of foundation models (FMs), combining them with APIs and data to process user requests, gather information, and execute specific tasks effectively. The introduction of now enables organizations to orchestrate multiple specialized AI agents working together to tackle complex, multi-step challenges that require diverse expertise. 
 
 [Amazon Bedrock](https://aws.amazon.com/bedrock/) offers a diverse selection of FMs, allowing you to choose the one that best fits your specific use case. Among these offerings, [Amazon Nova](https://aws.amazon.com/ai/generative-ai/nova/) stands out as AWS's next-generation FM, delivering breakthrough intelligence and industry-leading performance at exceptional value.
@@ -211,6 +237,33 @@ To learn more about Amazon Bedrock, refer to the following resources:
 * [Introducing multi-agent collaboration capability for Amazon Bedrock](https://aws.amazon.com/blogs/aws/introducing-multi-agent-collaboration-capability-for-amazon-bedrock/)
 * [Unlocking complex problem-solving with multi-agent collaboration on Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/unlocking-complex-problem-solving-with-multi-agent-collaboration-on-amazon-bedrock/)
 * [Introducing Amazon Nova foundation models: Frontier intelligence and industry leading price performance](https://aws.amazon.com/blogs/aws/introducing-amazon-nova-frontier-intelligence-and-industry-leading-price-performance/)
+
+## Cost
+
+## Next Steps
+
+## FAQ, Known Issues, Additional Considerations, and Limitations
+
+## Revisions
+
+- **v1.0.0** – Initial release with Amazon Bedrock Agents (multi-agent) integration with AWS Cost Explorer API and AWS Trusted Advisor Cost Optimization Pillar API
+
+## Notices
+
+Customers are responsible for making their own independent assessment of the information in this Guidance.  
+This Guidance:  
+(a) is for informational purposes only,  
+(b) represents AWS current product offerings and practices, which are subject to change without notice, and  
+(c) does not create any commitments or assurances from AWS and its affiliates, suppliers, or licensors.  
+
+AWS products or services are provided “as is” without warranties, representations, or conditions of any kind, whether express or implied.  
+AWS responsibilities and liabilities to its customers are controlled by AWS agreements, and this Guidance is not part of, nor does it modify, any agreement between AWS and its customers.
+
+## Authors
+- Sergio Barraza
+- Salman Ahmed
+- Ravi Kumar
+- Ankush Goyal  
 
 ## Security
 
