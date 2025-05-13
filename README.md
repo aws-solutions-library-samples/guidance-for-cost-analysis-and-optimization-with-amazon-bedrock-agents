@@ -239,6 +239,12 @@ To learn more about Amazon Bedrock, refer to the following resources:
 * [Introducing Amazon Nova foundation models: Frontier intelligence and industry leading price performance](https://aws.amazon.com/blogs/aws/introducing-amazon-nova-frontier-intelligence-and-industry-leading-price-performance/)
 
 ## Cost
+This estimate assumes a relatively simple usage pattern and minimal data storage. The majority of the cost comes from Amazon Bedrock usage. Costs could increase if:
+
+Requests to Bedrock involve larger token counts.
+Lambda functions run for longer durations.
+More data is stored or transferred through Amplify.
+Advanced features of Trusted Advisor are used.
 
 | AWS Service | Usage Estimate | Monthly Cost (USD) |
 |-------------|----------------|---------------------|
@@ -254,7 +260,12 @@ To learn more about Amazon Bedrock, refer to the following resources:
 
 ## Next Steps
 
+To further enhance the solution's capabilities, you can develop additional specialized agents that address more complex inquiries. These advanced agents can leverage the rich data available in AWS Cost and Usage Reports, enabling deeper analysis and comprehensive insights into your AWS spending patterns and resource utilization.
+
 ## FAQ, Known Issues, Additional Considerations, and Limitations
+
+Additional Considerations
+- Amazon Bedrock requests are charged per token
 
 ## Revisions
 
