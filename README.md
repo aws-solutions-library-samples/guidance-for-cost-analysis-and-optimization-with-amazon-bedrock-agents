@@ -27,7 +27,7 @@
 - 🔒 [Security](#security)
 - 📜 [License](#license)
 
-## Overvie
+## Overview
 
 AI agents are revolutionizing how businesses enhance their operational capabilities and enterprise applications. By enabling natural language interactions, these agents provide customers with a streamlined, personalized experience. [Amazon Bedrock Agents](https://aws.amazon.com/bedrock/agents/) uses the capabilities of foundation models (FMs), combining them with APIs and data to process user requests, gather information, and execute specific tasks effectively. The introduction of now enables organizations to orchestrate multiple specialized AI agents working together to tackle complex, multi-step challenges that require diverse expertise. 
 
