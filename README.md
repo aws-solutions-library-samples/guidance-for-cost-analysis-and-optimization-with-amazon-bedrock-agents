@@ -72,7 +72,8 @@ By combining AI-driven analysis with AWS cost management tools, this guidance of
 
 The architecture displayed in the following diagram uses several AWS services, including [AWS Lambda](https://aws.amazon.com/lambda/) functions, to create a scalable, secure, and efficient system. This approach demonstrates the potential of AI-driven multi-agent systems to assist with cloud financial management and solve a wide range of cloud management challenges.
 
-<img width="2643" alt="1 - SolutionsOverview-FinOps-AmazonBedrock-MultiAgent" src="https://github.com/user-attachments/assets/f37966ca-a73c-4677-8501-b5a73a9565c6" />
+![cost_optimization_reference_architecture_final](https://github.com/user-attachments/assets/d5fabeab-e1ad-4886-bc6f-2b3408248c31)
+
 
 In the following sections, we dive deeper into the architecture of our guidance, explore the capabilities of each agent, and discuss the potential impact of this approach on AWS cost management strategies.
 
