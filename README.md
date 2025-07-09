@@ -72,8 +72,24 @@ By combining AI-driven analysis with AWS cost management tools, this guidance of
 
 The architecture displayed in the following diagram uses several AWS services, including [AWS Lambda](https://aws.amazon.com/lambda/) functions, to create a scalable, secure, and efficient system. This approach demonstrates the potential of AI-driven multi-agent systems to assist with cloud financial management and solve a wide range of cloud management challenges.
 
-![cost_optimization_reference_architecture_final](https://github.com/user-attachments/assets/d5fabeab-e1ad-4886-bc6f-2b3408248c31)
+![cost_optimization_reference_architecture_final](assets/cost_optimization_reference_architecture_final.jpg)
+*Figure 1. Reference Architecture of Cost Analysis and Optimization with Amazon Bedrock Agents*
 
+<u>Architecture Workflow</u>:
+
+1. The Administrator User deploys the guidance to AWS Account and Region using an AWS CloudFormation Template.
+The Base AWS CloudFormation stack will deploy and create all of the AWS resources needed to host the guidance. This includes Amazon Cognito User group and user, Amazon Bedrock Agents, AWS Lambda Functions, AWS Identity and Access Management (IAM) roles and AWS STS token.
+2. The user navigates to the Secure Chat UI URL
+3. Secure Chat  application is hosted on AWS Amplify
+4. The web page is returned with HTML, CSS, JavaScript.  User is now able to input the configuration details for Amazon Cognito and Amazon Bedrock Agents
+5. Upon configuration completion, the user is prompted to authenticate using Amazon Cognito with a username and password configured for them in the user pool
+6. After successful authentication, Cognito Identity Pool will negotiate temporary credentials from AWS Simple Token Service (STS)
+7. Cognito Identity Pool passes temporary AWS credentials to the Secure Chat UI
+8. Once authenticated, the user now sees the Secure Chat UI chat prompt to interact with the Amazon Bedrock Agent that is configured
+9. The FinOps Supervisor Agent evaluates each User's question and directs it to one of two specialized sub-agents: the Cost Analysis Agent or the Cost Optimization Agent
+10. Each specialized agent (Cost Analysis or Cost Optimization) reviews its predefined set of actions to identify the correct procedure for answering the user's question
+11. The action groups execute their respective AWS  Lambda functions to fetch data, whether that's accessing the AWS Cost Explorer API or pulling recommendations from Trusted Advisor's Cost Optimization pillar
+12. The FinOps Supervisor Agent compiles all the gathered data into a final answer and sends it back to the Secure Chat UI visible to the User
 
 In the following sections, we dive deeper into the architecture of our guidance, explore the capabilities of each agent, and discuss the potential impact of this approach on AWS cost management strategies.
 
