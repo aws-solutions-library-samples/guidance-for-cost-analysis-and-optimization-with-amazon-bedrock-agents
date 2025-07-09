@@ -1,13 +1,14 @@
 > [!NOTE]
 > The content presented here serves as an example intended solely for educational objectives and should not be implemented in a live production environment without proper modifications and rigorous testing.
 
-# Build a FinOps agent using Amazon Bedrock with multi-agent capability and Amazon Nova as the foundation model
+# Guidance for Cost Analysis and Optimization with Amazon Bedrock Agents 
+
 
 ## Table of Contents
 - 📋 [Overview](#overview)
-- 🏗️ [Solution overview](#solution-overview)
+- 🏗️ [Guidance overview](#guidance-overview)
 - ✅ [Prerequisites](#prerequisites)
-- 🚀 [Deploy solution resources using AWS CloudFormation](#deploy-solution-resources-using-aws-cloudformation)
+- 🚀 [Deploy guidance resources using AWS CloudFormation](#deploy-guidance-resources-using-aws-cloudformation)
 - 💻 [Deploy the Amplify application](#deploy-the-amplify-application)
 - 🔐 [Amazon Cognito for user authentication](#amazon-cognito-for-user-authentication)
 - 🤖 [Amazon Bedrock Agents with multi-agent capability](#amazon-bedrock-agents-with-multi-agent-capability)
@@ -49,17 +50,17 @@ This makes Amazon Nova ideal for sophisticated use cases like our FinOps solutio
 
 A key advantage of the Amazon Nova model family is its [industry-leading price-performance ratio](https://aws.amazon.com/blogs/aws/introducing-amazon-nova-frontier-intelligence-and-industry-leading-price-performance/). Compared to other enterprise-grade AI models, Amazon Nova offers comparable or superior capabilities at a more competitive price point. This cost-effectiveness, combined with its versatility and performance, makes Amazon Nova an attractive choice for businesses looking to implement advanced AI solutions.
 
-In this post, we use the [multi-agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-multi-agent-collaboration.html) feature of Amazon Bedrock to demonstrate a powerful and innovative approach to [AWS cost management](). By using the advanced capabilities of Amazon Nova FMs, we've developed a solution that showcases how AI-driven agents can revolutionize the way organizations analyze, optimize, and manage their AWS costs.
+In this guidance, we use the [multi-agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-multi-agent-collaboration.html) feature of Amazon Bedrock to demonstrate a powerful and innovative approach to [AWS cost management](). By using the advanced capabilities of Amazon Nova FMs, we've developed a solution that showcases how AI-driven agents can revolutionize the way organizations analyze, optimize, and manage their AWS costs.
 
-## Solution overview
+## Guidance overview
 
-Our innovative AWS cost management solution uses the power of AI and multi-agent collaboration to provide comprehensive cost analysis and optimization recommendations. The core of the system is built around three key components:
+Our innovative AWS cost management guidance uses the power of AI and multi-agent collaboration to provide comprehensive cost analysis and optimization recommendations. The core of the system is built around three key components:
 
 * FinOps supervisor agent – Acts as the central coordinator, managing user queries and orchestrating the activities of specialized subordinate agents
 * Cost analysis agent – Uses [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) to gather and analyze cost data for specified time ranges
 * Cost optimization agent – Uses the [AWS Trusted Advisor Cost Optimization Pillar](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) to provide actionable cost-saving recommendations
 
-The solution integrates the multi-agent collaboration capabilities of Amazon Bedrock with Amazon Nova to create an intelligent, interactive, cost management AI assistant. This integration enables seamless communication between specialized agents, each focusing on different aspects of AWS cost management. Key features of the solution include:
+The guidance integrates the multi-agent collaboration capabilities of Amazon Bedrock with Amazon Nova to create an intelligent, interactive, cost management AI assistant. This integration enables seamless communication between specialized agents, each focusing on different aspects of AWS cost management. Key features of the guidance include:
 
 * User authentication through [Amazon Cognito](https://aws.amazon.com/cognito/) with [role-based access control](https://docs.aws.amazon.com/cognito/latest/developerguide/role-based-access-control.html)
 * Frontend application hosted on [AWS Amplify](https://aws.amazon.com/amplify/)
@@ -67,23 +68,23 @@ The solution integrates the multi-agent collaboration capabilities of Amazon Bed
 * Actionable cost optimization recommendations
 * Parallel processing of tasks for improved efficiency
 
-By combining AI-driven analysis with AWS cost management tools, this solution offers finance teams and cloud administrators a powerful, user-friendly interface to gain deep insights into AWS spending patterns and identify cost-saving opportunities.
+By combining AI-driven analysis with AWS cost management tools, this guidance offers finance teams and cloud administrators a powerful, user-friendly interface to gain deep insights into AWS spending patterns and identify cost-saving opportunities.
 
 The architecture displayed in the following diagram uses several AWS services, including [AWS Lambda](https://aws.amazon.com/lambda/) functions, to create a scalable, secure, and efficient system. This approach demonstrates the potential of AI-driven multi-agent systems to assist with cloud financial management and solve a wide range of cloud management challenges.
 
 <img width="2643" alt="1 - SolutionsOverview-FinOps-AmazonBedrock-MultiAgent" src="https://github.com/user-attachments/assets/f37966ca-a73c-4677-8501-b5a73a9565c6" />
 
-In the following sections, we dive deeper into the architecture of our solution, explore the capabilities of each agent, and discuss the potential impact of this approach on AWS cost management strategies.
+In the following sections, we dive deeper into the architecture of our guidance, explore the capabilities of each agent, and discuss the potential impact of this approach on AWS cost management strategies.
 
 ## Prerequisites
 
-You must have the following in place to complete the solution in this post:
+You must have the following in place to complete the guidance in this post:
 
 * An [AWS account](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fportal.aws.amazon.com%2Fbilling%2Fsignup%2Fresume&client_id=signup)
-* FM [access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html) in Amazon Bedrock for Amazon Nova Pro and Micro in the same [AWS Region](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html#region) where you will deploy this solution
+* FM [access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html) in Amazon Bedrock for Amazon Nova Pro and Micro in the same [AWS Region](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html#region) where you will deploy this guidance
 * The accompanying [AWS CloudFormation template](http://aws.amazon.com/cloudformation) downloaded from the [aws-samples GitHub repo](https://github.com/aws-samples/sample-finops-bedrock-multiagent-nova)
 
-## Deploy solution resources using AWS CloudFormation
+## Deploy guidance resources using AWS CloudFormation
 
 This CloudFormation template is designed to run in the us-east-1 Region. If you deploy in a different Region, you must configure cross-Region [inference profiles](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-create.html) to have proper functionality and update the CloudFormation template accordingly.
 
@@ -159,7 +160,7 @@ The Amazon Bedrock multi-agent architecture enables sophisticated FinOps problem
 
 ## Lambda functions for Amazon Bedrock action groups 
 
-As part of this solution, Lambda functions are deployed to support the action groups defined for each subordinate agent.  
+As part of this guidance, Lambda functions are deployed to support the action groups defined for each subordinate agent.  
 
 The CostAnalysisAgent uses three distinct Lambda backed action groups to deliver comprehensive cost management capabilities. The CostAnalysisActionGroup connects with Cost Explorer to extract and analyze detailed historical cost data, providing granular insights into cloud spending patterns and resource utilization. The ClockandCalendarActionGroup maintains temporal precision by providing current date and time functionality, essential for accurate period-based cost analysis and reporting. The CostForecastActionGroup uses the [Cost Explorer forecasting](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-forecast.html) function, which analyzes historical cost data and provides future cost projections. This information helps the agent support proactive budget planning and make informed recommendations. These action groups work together seamlessly, enabling the agent to provide historical cost analysis and future spend predictions while maintaining precise temporal context.
 
@@ -167,11 +168,11 @@ The CostOptimizationAgent incorporates two Trusted Advisor focused action groups
 
 ## Amplify for frontend 
 
-AWS Amplify provides a streamlined solution for deploying and hosting web applications with built-in security and scalability features. The service reduces the complexity of managing infrastructure, allowing developers to concentrate on application development. In our solution, we use the manual deployment capabilities of Amplify to host our frontend application code.
+AWS Amplify provides a streamlined solution for deploying and hosting web applications with built-in security and scalability features. The service reduces the complexity of managing infrastructure, allowing developers to concentrate on application development. In our guidance, we use the manual deployment capabilities of Amplify to host our frontend application code.
 
 ## Multi-agent and application walkthrough
 
-To validate the solution before using the Amplify deployed frontend, we can conduct testing directly on the [AWS Management Console](http://aws.amazon.com/console). By navigating to the FinOpsSupervisorAgent, we can pose a question like "What is my cost for Feb 2025 and what are my current cost savings opportunity?" This query demonstrates the multi-agent orchestration in action. As shown in the following screenshot, the FinOpsSupervisorAgent coordinates with both the CostAnalysisAgent (to retrieve February 2025 cost data) and the CostOptimizationAgent (to identify current cost savings opportunities). This illustrates how the FinOpsSupervisorAgent effectively delegates tasks to specialized agents and synthesizes their responses into a comprehensive answer, showcasing the solution's integrated approach to FinOps queries.
+To validate the guidance before using the Amplify deployed frontend, we can conduct testing directly on the [AWS Management Console](http://aws.amazon.com/console). By navigating to the FinOpsSupervisorAgent, we can pose a question like "What is my cost for Feb 2025 and what are my current cost savings opportunity?" This query demonstrates the multi-agent orchestration in action. As shown in the following screenshot, the FinOpsSupervisorAgent coordinates with both the CostAnalysisAgent (to retrieve February 2025 cost data) and the CostOptimizationAgent (to identify current cost savings opportunities). This illustrates how the FinOpsSupervisorAgent effectively delegates tasks to specialized agents and synthesizes their responses into a comprehensive answer, showcasing the guidance's integrated approach to FinOps queries.
 
 ![3 - AmazonBedrockAgentsConsoleDemo-compressed](https://github.com/user-attachments/assets/5af95bb4-84b1-4a78-8557-b768ef863fe5)
 
@@ -220,15 +221,15 @@ If you decide to discontinue using the FinOps application, you can follow these 
 
 ## Considerations 
 
-For optimal visibility across your organization, deploy this solution in your AWS payer account to access cost details for your linked accounts through Cost Explorer.
+For optimal visibility across your organization, deploy this guidance in your AWS payer account to access cost details for your linked accounts through Cost Explorer.
 
-Trusted Advisor cost optimization visibility is limited to the account where you deploy this solution. To expand its scope, [enable](https://docs.aws.amazon.com/awssupport/latest/user/organizational-view.html) Trusted Advisor at the AWS organization level and modify this solution accordingly.
+Trusted Advisor cost optimization visibility is limited to the account where you deploy this guidance. To expand its scope, [enable](https://docs.aws.amazon.com/awssupport/latest/user/organizational-view.html) Trusted Advisor at the AWS organization level and modify this guidance accordingly.
 
 Before deploying to production, enhance security by implementing additional safeguards. You can do this by [associating guardrails](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-guardrail.html) with your agent in Amazon Bedrock.
 
 ## Conclusion
 
-The integration of the multi-agent capability of Amazon Bedrock with Amazon Nova demonstrates the transformative potential of AI in AWS cost management. Our FinOps agent solution showcases how specialized AI agents can work together to deliver comprehensive cost analysis, forecasting, and optimization recommendations in a secure and user-friendly environment. This implementation not only addresses immediate cost management challenges, but also adapts to evolving cloud financial operations. As AI technologies advance, this approach sets a foundation for more intelligent and proactive cloud management strategies across various business operations.
+The integration of the multi-agent capability of Amazon Bedrock with Amazon Nova demonstrates the transformative potential of AI in AWS cost management. Our FinOps agent guidance showcases how specialized AI agents can work together to deliver comprehensive cost analysis, forecasting, and optimization recommendations in a secure and user-friendly environment. This implementation not only addresses immediate cost management challenges, but also adapts to evolving cloud financial operations. As AI technologies advance, this approach sets a foundation for more intelligent and proactive cloud management strategies across various business operations.
 
 ## Additional resources
 
@@ -260,7 +261,7 @@ Advanced features of Trusted Advisor are used.
 
 ## Next Steps
 
-To further enhance the solution's capabilities, you can develop additional specialized agents that address more complex inquiries. These advanced agents can leverage the rich data available in AWS Cost and Usage Reports, enabling deeper analysis and comprehensive insights into your AWS spending patterns and resource utilization.
+To further enhance the guidance's capabilities, you can develop additional specialized agents that address more complex inquiries. These advanced agents can leverage the rich data available in AWS Cost and Usage Reports, enabling deeper analysis and comprehensive insights into your AWS spending patterns and resource utilization.
 
 ## FAQ, Known Issues, Additional Considerations, and Limitations
 
