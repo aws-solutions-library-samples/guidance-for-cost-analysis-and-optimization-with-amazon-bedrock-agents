@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'This CloudFormation template deploys an AWS architecture consisting of a Cognito User Pool with an Identity Pool, a trio of Amazon Bedrock Agents (configured as one supervisor and two subordinate agents), and their associated Lambda Functions.'
+Description: '(SO9593) This CloudFormation template deploys an AWS architecture consisting of a Cognito User Pool with an Identity Pool, a trio of Amazon Bedrock Agents (configured as one supervisor and two subordinate agents), and their associated Lambda Functions.'
 
 Parameters:
   SupervisorFoundationModel:
