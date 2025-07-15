@@ -93,7 +93,52 @@ The Base AWS CloudFormation stack will deploy and create all of the AWS resource
 
 In the following sections, we dive deeper into the architecture of our guidance, explore the capabilities of each agent, and discuss the potential impact of this approach on AWS cost management strategies.
 
-## Prerequisites
+### AWS services in this Guidance
+
+**TO DO: update servcies in this Guidance details below**
+
+| **AWS Service** | **Role** | **Description** |
+|-----------------|----------|-----------------|
+| Amazon Bedrock (Nova) | 3,000 requests * 1,000 tokens/request | $30.00 |
+| Amazon Cognito | 100 MAU | $0.00 (within free tier) |
+| AWS Lambda | 3,000 invocations * 5 functions * 1s avg. duration | $0.00 (within free tier) |
+| AWS Amplify | 1 GB storage, 5 GB data transfer | $0.23 |
+| Amazon CloudWatch | Basic monitoring + 1 GB logs | $0.50 |
+| AWS IAM | N/A | $0.00 |
+| AWS Cost Explorer | 3,000 API requests | $0.00 (within free tier) |
+| AWS Trusted Advisor | Basic checks | $0.00 |
+
+## Cost
+This estimate assumes a relatively simple usage pattern and minimal data storage. The majority of the cost comes from Amazon Bedrock usage. Costs could increase if:
+
+Requests to Bedrock involve larger token counts.
+Lambda functions run for longer durations.
+More data is stored or transferred through Amplify.
+Advanced features of Trusted Advisor are used.
+
+| AWS Service | Usage Estimate | Monthly Cost (USD) |
+|-------------|----------------|---------------------|
+| Amazon Bedrock (Nova) | 3,000 requests * 1,000 tokens/request | $30.00 |
+| Amazon Cognito | 100 MAU | $0.00 (within free tier) |
+| AWS Lambda | 3,000 invocations * 5 functions * 1s avg. duration | $0.00 (within free tier) |
+| AWS Amplify | 1 GB storage, 5 GB data transfer | $0.23 |
+| Amazon CloudWatch | Basic monitoring + 1 GB logs | $0.50 |
+| AWS IAM | N/A | $0.00 |
+| AWS Cost Explorer | 3,000 API requests | $0.00 (within free tier) |
+| AWS Trusted Advisor | Basic checks | $0.00 |
+| **Total Estimated Monthly Cost** | | **$30.73** |
+
+## Security
+
+## Supported AWS Regions
+
+**TO DO: validate supported regions**
+
+The core components of the Guidance for Cost Analysis and Optimization with Amazon Bedrock Agents are available in all AWS Regions where Amazon Bedrock (Nova) models are available.
+
+## Deploy the Guidance
+
+### Prerequisites
 
 You must have the following in place to complete the guidance in this post:
 
@@ -101,6 +146,12 @@ You must have the following in place to complete the guidance in this post:
 * FM [access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html) in Amazon Bedrock for Amazon Nova Pro and Micro in the same [AWS Region](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html#region) where you will deploy this guidance
 * The accompanying [AWS CloudFormation template](http://aws.amazon.com/cloudformation) downloaded from the [aws-samples GitHub repo](https://github.com/aws-samples/sample-finops-bedrock-multiagent-nova)
 
+### Deployment Instructions
+
+**TO DO: change link to Live IG when going live**
+Please refer to [Full Implementation Guide](https://implementationguides.kits.eventoutfitters.aws.dev/cao-aba-0523/storage/cost-analysis-and-optimization-with-amazon-bedrock-agents.html) for detailed instructions for all deployment options.
+
+<!-- 
 ## Deploy guidance resources using AWS CloudFormation
 
 This CloudFormation template is designed to run in the us-east-1 Region. If you deploy in a different Region, you must configure cross-Region [inference profiles](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-create.html) to have proper functionality and update the CloudFormation template accordingly.
@@ -235,6 +286,7 @@ If you decide to discontinue using the FinOps application, you can follow these 
    * Locate the stack you created during the deployment process (you assigned a name to it).
    * Select the stack and choose Delete.
 2. Delete the Amplify application and its resources. For instructions, refer to [Clean Up Resources](https://aws.amazon.com/getting-started/hands-on/build-web-app-s3-lambda-api-gateway-dynamodb/module-six/).
+-->
 
 ## Considerations 
 
@@ -256,25 +308,7 @@ To learn more about Amazon Bedrock, refer to the following resources:
 * [Unlocking complex problem-solving with multi-agent collaboration on Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/unlocking-complex-problem-solving-with-multi-agent-collaboration-on-amazon-bedrock/)
 * [Introducing Amazon Nova foundation models: Frontier intelligence and industry leading price performance](https://aws.amazon.com/blogs/aws/introducing-amazon-nova-frontier-intelligence-and-industry-leading-price-performance/)
 
-## Cost
-This estimate assumes a relatively simple usage pattern and minimal data storage. The majority of the cost comes from Amazon Bedrock usage. Costs could increase if:
 
-Requests to Bedrock involve larger token counts.
-Lambda functions run for longer durations.
-More data is stored or transferred through Amplify.
-Advanced features of Trusted Advisor are used.
-
-| AWS Service | Usage Estimate | Monthly Cost (USD) |
-|-------------|----------------|---------------------|
-| Amazon Bedrock (Nova) | 3,000 requests * 1,000 tokens/request | $30.00 |
-| Amazon Cognito | 100 MAU | $0.00 (within free tier) |
-| AWS Lambda | 3,000 invocations * 5 functions * 1s avg. duration | $0.00 (within free tier) |
-| AWS Amplify | 1 GB storage, 5 GB data transfer | $0.23 |
-| Amazon CloudWatch | Basic monitoring + 1 GB logs | $0.50 |
-| AWS IAM | N/A | $0.00 |
-| AWS Cost Explorer | 3,000 API requests | $0.00 (within free tier) |
-| AWS Trusted Advisor | Basic checks | $0.00 |
-| **Total Estimated Monthly Cost** | | **$30.73** |
 
 ## Next Steps
 
@@ -305,7 +339,8 @@ AWS responsibilities and liabilities to its customers are controlled by AWS agre
 - Sergio Barraza
 - Salman Ahmed
 - Ravi Kumar
-- Ankush Goyal  
+- Ankush Goyal
+- Daniel Zilberman, Sr Solutions Architect, Techical Solutions 
 
 ## Security
 
