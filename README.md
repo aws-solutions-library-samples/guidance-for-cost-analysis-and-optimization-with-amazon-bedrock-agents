@@ -10,9 +10,9 @@
 - 📋 [Overview](#overview)
 - 🏗️ [Guidance overview](#guidance-overview)
 - ✅ [Prerequisites](#prerequisites)
-- 🚀 [Deploy guidance resources using AWS CloudFormation](#deploy-guidance-resources-using-aws-cloudformation)
-- 💻 [Deploy the Amplify application](#deploy-the-amplify-application)
+- 🚀 [Deploy the Guidance](#deploy-the-guidance)
 <!--
+- 💻 [Deploy the Amplify application](#deploy-the-amplify-application)
 - 🔐 [Amazon Cognito for user authentication](#amazon-cognito-for-user-authentication)
 - 🤖 [Amazon Bedrock Agents with multi-agent capability](#amazon-bedrock-agents-with-multi-agent-capability)
 - ⚡ [Lambda functions for Amazon Bedrock action groups](#lambda-functions-for-amazon-bedrock-action-groups)
@@ -99,7 +99,7 @@ In the following sections, we dive deeper into the architecture of our guidance,
 
 ### AWS services in this Guidance
 
-**TO DO: update servcies in this Guidance details below**
+**TO DO: update services in this Guidance details below**
 
 | **AWS Service** | **Role** | **Description** |
 |-----------------|----------|-----------------|
