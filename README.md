@@ -1,5 +1,7 @@
+<!--
 > [!NOTE]
 > The content presented here serves as an example intended solely for educational objectives and should not be implemented in a live production environment without proper modifications and rigorous testing.
+-->
 
 # Guidance for Cost Analysis and Optimization with Amazon Bedrock Agents 
 
@@ -10,12 +12,14 @@
 - ✅ [Prerequisites](#prerequisites)
 - 🚀 [Deploy guidance resources using AWS CloudFormation](#deploy-guidance-resources-using-aws-cloudformation)
 - 💻 [Deploy the Amplify application](#deploy-the-amplify-application)
+<!--
 - 🔐 [Amazon Cognito for user authentication](#amazon-cognito-for-user-authentication)
 - 🤖 [Amazon Bedrock Agents with multi-agent capability](#amazon-bedrock-agents-with-multi-agent-capability)
 - ⚡ [Lambda functions for Amazon Bedrock action groups](#lambda-functions-for-amazon-bedrock-action-groups)
 - 🌐 [Amplify for frontend](#amplify-for-frontend)
 - 🔄 [Multi-agent and application walkthrough](#multi-agent-and-application-walkthrough)
 - 🧹 [Clean up](#clean-up)
+-->
 - 💡 [Considerations](#considerations)
 - 📝 [Conclusion](#conclusion)
 - 📚 [Additional resources](#additional-resources)
@@ -149,7 +153,7 @@ You must have the following in place to complete the guidance in this post:
 ### Deployment Instructions
 
 **TO DO: change link to Live IG when going live**
-Please refer to [Full Implementation Guide](https://implementationguides.kits.eventoutfitters.aws.dev/cao-aba-0523/storage/cost-analysis-and-optimization-with-amazon-bedrock-agents.html) for detailed instructions for all deployment options.
+Please refer to [Implementation Guide](https://implementationguides.kits.eventoutfitters.aws.dev/cao-aba-0523/storage/cost-analysis-and-optimization-with-amazon-bedrock-agents.html) for detailed instructions for guidance deployment options.
 
 <!-- 
 ## Deploy guidance resources using AWS CloudFormation
@@ -336,10 +340,10 @@ AWS products or services are provided “as is” without warranties, representa
 AWS responsibilities and liabilities to its customers are controlled by AWS agreements, and this Guidance is not part of, nor does it modify, any agreement between AWS and its customers.
 
 ## Authors
-- Sergio Barraza
-- Salman Ahmed
-- Ravi Kumar
-- Ankush Goyal
+- Sergio Barraza, Sr TAM
+- Salman Ahmed, Sr TAM
+- Ravi Kumar, Sr TAM
+- Ankush Goyal, ESL TAM
 - Daniel Zilberman, Sr Solutions Architect, Techical Solutions 
 
 ## Security
@@ -348,5 +352,5 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+This library is licensed under the MIT-0 License. See the [LICENSE](./LICENSE) file.
 
