@@ -10,7 +10,10 @@
 - 📋 [Overview](#overview)
 - 🏗️ [Guidance overview](#guidance-overview)
 - ✅ [Prerequisites](#prerequisites)
+- ☁️ [AWS services in this Guidance](#aws-services-in-this-guidance)
+- 💰 [Cost](#cost)
 - 🔒 [Security](#security)
+- 🌎 [Supported AWS Regions](#supported-aws-regions)
 - 🚀 [Deploy the Guidance](#deploy-the-guidance)
 <!--
 - 💻 [Deploy the Amplify application](#deploy-the-amplify-application)
@@ -24,7 +27,6 @@
 - 💡 [Considerations](#considerations)
 - 📝 [Conclusion](#conclusion)
 - 📚 [Additional resources](#additional-resources)
-- 💰 [Cost](#cost)
 - ➡️ [Next Steps](#next-steps)
 - ❓ [FAQ, Known Issues, Additional Considerations, and Limitations](#faq-known-issues-additional-considerations-and-limitations)
 - 📋 [Revisions](#revisions)
@@ -135,15 +137,24 @@ Advanced features of Trusted Advisor are used.
 
 When you build systems on AWS infrastructure, security responsibilities are shared between you and AWS. This [shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) reduces your operational burden because AWS operates, manages, and controls the components including the host operating system, the virtualization layer, and the physical security of the facilities in which the services operate. For more information about AWS security, visit [AWS Cloud Security](http://aws.amazon.com/security/).
 
-**TO DO: add security posture details here**
-<br/>
-Please see [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+This Guidance implements the following security features:
 
-## Supported AWS Regions
+- **Amazon Cognito user authentication** - Secure user authentication with user pools and identity pools
+- **Role-based access control** - Ensures that only authorized users can access specific functionality
+- **IAM roles and policies** - Provides least-privilege permissions for Lambda functions and other AWS services
+- **Secure API communication** - All communication between components uses HTTPS encryption
 
-**TO DO: validate actual supported regions**
+### Supported AWS Regions
 
-The core components of the Guidance for Cost Analysis and Optimization with Amazon Bedrock Agents are available in all AWS Regions where Amazon Bedrock (Nova) models are available.
+"Guidance for Cost Analysis and Optimization with Amazon Bedrock Agents" is supported in the following AWS Regions (as of July 2025):
+
+| **Region Name**  | | 
+|-----------|------------|
+|US East (Ohio) | Asia Pacific (Seoul) |
+|US East (N. Virginia) | Europe (Paris) |
+|US West (Northern California) | Middle East (Bahrain) |
+|US West (Oregon) | AWS GovCloud (US-West) |
+|Africa (Cape Town)  | Asia Pacific (Seoul) |
 
 ## Deploy the Guidance
 
