@@ -99,18 +99,17 @@ In the following sections, we dive deeper into the architecture of our guidance,
 
 ### AWS services in this Guidance
 
-**TO DO: update services in this Guidance details below**
-
-| **AWS Service** | **Role** | **Description** |
-|-----------------|----------|-----------------|
-| Amazon Bedrock (Nova) | 3,000 requests * 1,000 tokens/request | $30.00 |
-| Amazon Cognito | 100 MAU | $0.00 (within free tier) |
-| AWS Lambda | 3,000 invocations * 5 functions * 1s avg. duration | $0.00 (within free tier) |
-| AWS Amplify | 1 GB storage, 5 GB data transfer | $0.23 |
-| Amazon CloudWatch | Basic monitoring + 1 GB logs | $0.50 |
-| AWS IAM | N/A | $0.00 |
-| AWS Cost Explorer | 3,000 API requests | $0.00 (within free tier) |
-| AWS Trusted Advisor | Basic checks | $0.00 |
+| AWS service | Description |
+|-------------|-------------|
+| [Amazon Bedrock](https://aws.amazon.com/bedrock/) | Core. Provides foundation models and agent capabilities for natural language processing and multi-agent orchestration. |
+| [Amazon Nova](https://aws.amazon.com/ai/generative-ai/nova/) | Core. AWS's next-generation foundation model that delivers breakthrough intelligence and industry-leading performance. |
+| [AWS Lambda](https://aws.amazon.com/lambda/) | Core. Executes code for Amazon Bedrock action groups, enabling agents to interact with AWS services. |
+| [Amazon Cognito](https://aws.amazon.com/cognito/) | Core. Provides user authentication and role-based access control for the application. |
+| [AWS Amplify](https://aws.amazon.com/amplify/) | Core. Hosts the frontend application for user interaction with the FinOps agents. |
+| [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) | Core. Provides cost data and analysis capabilities for the Cost Analysis Agent. |
+| [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) | Core. Delivers cost optimization recommendations for the Cost Optimization Agent. |
+| [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) | Supporting. Manages permissions and access control for AWS services used in the guidance. |
+| [AWS CloudFormation](http://aws.amazon.com/cloudformation) | Supporting. Deploys and configures the guidance resources in a consistent and repeatable manner. |
 
 ## Cost
 This estimate assumes a relatively simple usage pattern and minimal data storage. The majority of the cost comes from Amazon Bedrock usage. Costs could increase if:
