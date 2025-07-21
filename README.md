@@ -10,6 +10,7 @@
 - 📋 [Overview](#overview)
 - 🏗️ [Guidance overview](#guidance-overview)
 - ✅ [Prerequisites](#prerequisites)
+- 🔒 [Security](#security)
 - 🚀 [Deploy the Guidance](#deploy-the-guidance)
 <!--
 - 💻 [Deploy the Amplify application](#deploy-the-amplify-application)
@@ -29,7 +30,6 @@
 - 📋 [Revisions](#revisions)
 - ⚠️ [Notices](#notices)
 - 👥 [Authors](#authors)
-- 🔒 [Security](#security)
 - 📜 [License](#license)
 
 ## Overview
@@ -134,9 +134,14 @@ Advanced features of Trusted Advisor are used.
 
 ## Security
 
+When you build systems on AWS infrastructure, security responsibilities are shared between you and AWS. This [shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) reduces your operational burden because AWS operates, manages, and controls the components including the host operating system, the virtualization layer, and the physical security of the facilities in which the services operate. For more information about AWS security, visit [AWS Cloud Security](http://aws.amazon.com/security/).
+
+**TO DO: add security posture details here**
+Please see [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
 ## Supported AWS Regions
 
-**TO DO: validate supported regions**
+**TO DO: validate actual supported regions**
 
 The core components of the Guidance for Cost Analysis and Optimization with Amazon Bedrock Agents are available in all AWS Regions where Amazon Bedrock (Nova) models are available.
 
@@ -346,9 +351,6 @@ AWS responsibilities and liabilities to its customers are controlled by AWS agre
 - Ankush Goyal, ESL TAM
 - Daniel Zilberman, Sr Solutions Architect, Techical Solutions 
 
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
 ## License
 
