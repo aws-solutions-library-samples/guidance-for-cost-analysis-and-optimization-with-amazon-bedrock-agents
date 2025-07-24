@@ -169,7 +169,7 @@ You must have the following in place to complete the guidance in this post:
 ### Deployment Instructions
 
 **TO DO: change link to Live IG when going live**
-Please refer to [Implementation Guide](https://implementationguides.kits.eventoutfitters.aws.dev/cao-aba-0523/storage/cost-analysis-and-optimization-with-amazon-bedrock-agents.html) for detailed instructions for guidance deployment options.
+Please refer to [Implementation Guide](https://aws-solutions-library-samples.github.io/compute/cost-analysis-and-optimization-with-amazon-bedrock-agents.html) for detailed instructions for guidance deployment options.
 
 <!-- 
 ## Deploy guidance resources using AWS CloudFormation
